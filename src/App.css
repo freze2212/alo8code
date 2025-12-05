@@ -44,9 +44,7 @@
 
 @media (min-width: 768px) {
   .main-background {
-    background-image: url('/bg-pc.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* Nền PC giờ dùng video, không dùng background-image nữa */
+    background-image: none;
   }
 }
