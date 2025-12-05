@@ -104,10 +104,21 @@ function App() {
 
   return (
     <>
-      <main
-        className="main-background main-background-mobile w-full flex items-start justify-center pt-16 sm:pt-12 md:pt-16 px-4 sm:px-6 md:px-8"
-        aria-label="Landing background"
-      >
+      <div className="relative min-h-screen">
+        {/* Video background cho PC */}
+        <video
+          className="hidden md:block absolute inset-0 w-full h-full object-cover z-0"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/bg-pc.mp4" type="video/mp4" />
+        </video>
+        <main
+          className="main-background main-background-mobile w-full flex items-start justify-center pt-16 sm:pt-12 md:pt-16 px-4 sm:px-6 md:px-8 relative z-10"
+          aria-label="Landing background"
+        >
         <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-6 w-full max-w-[520px]">
           {/* Logo */}
           <img
@@ -224,6 +235,7 @@ function App() {
           </div>
         </div>
       </main>
+      </div>
 
       <Footer />
       {popup && <StatusModal type={popup.type} message={popup.message} onClose={closePopup} />}
