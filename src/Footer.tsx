@@ -211,7 +211,7 @@ function Footer() {
               {/* <img
                 src="/juve-kjc.webp"
                 alt="Juventus & KJC"
-                className="h-[40px] w-auto object-contain"
+                className="h-[40px] w-auto object-conta"
               /> */}
             </div>
           </div>
