@@ -148,8 +148,7 @@ function App() {
     relative w-full max-w-[320px] sm:max-w-[420px] md:max-w-none md:w-auto
     h-[300px] sm:h-[400px] md:h-[535px]
     flex items-center justify-center
-     max-[430px]:mt-[9rem]
-   
+     mt-[9rem]
    
   "
             >
