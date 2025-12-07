@@ -1,6 +1,6 @@
 .main-background {
   background-image: url('/bg-mb.webp');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -14,7 +14,7 @@
 /* Breakpoints mobile custom */
 @media (max-width: 430px) {
   .main-background-mobile {
-    min-height: 83vh;
+    min-height: 76vh;
   }
 }
 
@@ -38,7 +38,7 @@
 
 @media (max-width: 360px) {
   .main-background-mobile {
-    min-height: 70vh;
+    min-height: 65vh;
   }
 }
 
