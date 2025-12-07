@@ -134,7 +134,7 @@ function App() {
           className="main-background main-background-mobile w-full flex items-start justify-center  px-4 sm:px-6 md:px-8 relative z-10"
           aria-label="Landing background"
         >
-          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-6 w-full max-w-[520px]">
+          <div className="flex flex-col items-center gap-4 sm:gap-5 md:gap-6 w-full max-w-[520px] mt-[4rem]">
             {/* Logo */}
             <img
               src="/logo.webp"
@@ -148,7 +148,7 @@ function App() {
     relative w-full max-w-[320px] sm:max-w-[420px] md:max-w-none md:w-auto
     h-[300px] sm:h-[400px] md:h-[535px]
     flex items-center justify-center
-     mt-[9rem]
+     mt-[7rem]
    
   "
             >
