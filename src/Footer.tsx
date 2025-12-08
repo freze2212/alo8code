@@ -174,45 +174,48 @@ function Footer() {
             </div>
           </div>
 
-          {/* Banner + Juventus text mobile */}
-          {/* Banner + Juventus text mobile */}
-          <div className="flex flex-col items-center gap-3">
-            <img
-              src="/banner.webp"
-              alt="Footer Banner"
-              className="h-auto max-w-[260px] object-contain"
-            />
-
-            {/* Text + logo cùng 1 hàng */}
-            <div className="flex items-center justify-center gap-3">
-              <div className="flex flex-col">
-                <span
-                  className="text-white text-[16px] leading-[100%]"
-                  style={{
-                    fontFamily:
-                      "Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-                    fontWeight: 400,
-                  }}
-                >
-                  Juventus FC & KJC
-                </span>
-                <span
-                  className="text-white text-[14px] leading-[100%]"
-                  style={{
-                    fontFamily:
-                      "Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-                    fontWeight: 400,
-                  }}
-                >
-                  Đối tác chính thức Năm 2025-2026
-                </span>
+          <div className="flex flex-col items-center justifi-center gap-3 w-full">
+            <div className="grid grid-cols-2 items-start gap-3 w-full">
+              {/* Cột trái: banner */}
+              <div className="flex justify-center">
+                <img
+                  src="/banner.webp"
+                  alt="Footer Banner"
+                  className="h-auto max-w-[260px] w-full object-contain"
+                />
               </div>
 
-              {/* <img
-                src="/juve-kjc.webp"
-                alt="Juventus & KJC"
-                className="h-[40px] w-auto object-conta"
-              /> */}
+              {/* Cột phải: slogan + text bên dưới, căn trái */}
+              <div className="flex flex-col  gap-2 mt-10">
+                <img
+                  src="/slogan.webp"
+                  alt="Juventus & KJC"
+                  className="h-auto w-full max-w-[260px] object-contain"
+                />
+
+                <div className="flex flex-col text-right ">
+                  <span
+                    className="text-white text-[16px] leading-[100%] "
+                    style={{
+                      fontFamily:
+                        "Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+                      fontWeight: 700,
+                    }}
+                  >
+                    Juventus FC & KJC
+                  </span>
+                  <span
+                    className="text-white text-[14px] leading-[100%]"
+                    style={{
+                      fontFamily:
+                        "Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
+                      fontWeight: 400,
+                    }}
+                  >
+                    Đối tác chính thức Năm 2025-2026
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
