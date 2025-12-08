@@ -31,7 +31,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full sm:mt-0 bg-[rgba(13,19,41,1)] mt-[80px] bg-gradient-to-b from-[rgba(13,19,41,1)] via-[rgba(16,31,83,1)] to-[rgba(13,19,41,1)] text-white">
+    <footer className="w-full sm:mt-0 bg-[rgba(13,19,41,1)] mt-[5px] bg-gradient-to-b from-[rgba(13,19,41,1)] via-[rgba(16,31,83,1)] to-[rgba(13,19,41,1)] text-white">
       <div className="mx-auto flex w-full sm:w-11/12 md:w-10/12 flex-col gap-3 sm:gap-2 py-4 sm:py-5 md:py-6 px-4 sm:px-6 text-[11px] sm:text-[12px] md:text-[13px]">
         {/* Top desktop */}
         <div className="hidden md:flex w-full flex-row items-center justify-between gap-4">
