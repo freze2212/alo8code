@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import "./index.css";
 import "./App.css";
 import Footer from "./Footer";
+import FloatingIPhoneFolderMenu from "./components/FloatingIPhoneFolderMenu";
 import StatusModal from "./components/StatusModal";
 
 function App() {
@@ -268,6 +269,7 @@ function App() {
       </div>
 
       <Footer />
+      <FloatingIPhoneFolderMenu />
       {popup && (
         <StatusModal
           type={popup.type}
