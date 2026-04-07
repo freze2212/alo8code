@@ -95,8 +95,8 @@ export default function FloatingIPhoneFolderMenu({
       },
       {
         key: "tele-club",
-        href: "https://t.me/RR88QUATANG",
-        iconSrc: "/quatang.png",
+        href: "https://rr88code.com",
+        iconSrc: "/code.png",
       },
       {
         key: "nhan-code",
