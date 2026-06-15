@@ -1,3 +1,5 @@
+import './StatusModal.css'
+
 type StatusModalProps = {
   type: 'success' | 'error'
   message: string
@@ -5,6 +7,8 @@ type StatusModalProps = {
 }
 
 function StatusModal({ type, message, onClose }: StatusModalProps) {
+  const isError = type === 'error'
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
       <div className="relative w-full max-w-[360px] rounded-[32px] bg-white px-8 pt-14 pb-8 text-center shadow-[0_24px_70px_rgba(8,32,71,0.4)]">
@@ -19,7 +23,11 @@ function StatusModal({ type, message, onClose }: StatusModalProps) {
         <button
           type="button"
           onClick={onClose}
-          className="mt-6 w-full rounded-full bg-gradient-to-b from-[#4aa3ff] to-[#0053c7] py-3 text-[16px] font-semibold text-white shadow-[0_12px_30px_rgba(0,74,163,0.4)]"
+          className={
+            isError
+              ? 'status-modal__btn--error mt-6 w-full rounded-full py-3 text-[16px] font-semibold'
+              : 'mt-6 w-full rounded-full bg-gradient-to-b from-[#4aa3ff] to-[#0053c7] py-3 text-[16px] font-semibold text-white shadow-[0_12px_30px_rgba(0,74,163,0.4)]'
+          }
         >
           Xác Nhận
         </button>

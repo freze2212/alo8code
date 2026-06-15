@@ -35,11 +35,11 @@ function clamp(n: number, min: number, max: number) {
 
 export default function FloatingIPhoneFolderMenu({
   items,
-  storageKey = "rr88_floating_home_pos",
+  storageKey = "alo8_floating_home_pos",
 }: FloatingIPhoneFolderMenuProps) {
   const [open, setOpen] = React.useState(false);
   const [homeHref, setHomeHref] = React.useState(
-    "https://mb-mm88-link.rr88tino.workers.dev/",
+    "https://mb-mm88-link.alo8tino.workers.dev/",
   );
   const [pos, setPos] = React.useState<Position | null>(null);
   const [isDragging, setIsDragging] = React.useState(false);
@@ -71,8 +71,8 @@ export default function FloatingIPhoneFolderMenu({
       const isMobile = byWidth || byUA;
       setHomeHref(
         isMobile
-          ? "https://mb-rr88-link.rr88tino.workers.dev/"
-          : "https://pc-rr88-link.rr88tino.workers.dev/",
+          ? "https://mb-alo8-link.alo8tino.workers.dev/"
+          : "https://pc-alo8-link.alo8tino.workers.dev/",
       );
     };
 
@@ -85,22 +85,22 @@ export default function FloatingIPhoneFolderMenu({
     () => [
       {
         key: "CSKH",
-        href: "https://rr88cskh.pages.dev/",
+        href: "https://alo8cskh.pages.dev/",
         iconSrc: "/IconChat.png",
       },
       {
         key: "tele-vip",
-        href: "https://rr88note.com/notebook/",
+        href: "https://alo8note.com/notebook/",
         iconSrc: "/trangcamnang.png",
       },
       {
         key: "tele-club",
-        href: "https://rr88code.com",
+        href: "https://alo8code.com",
         iconSrc: "/code.png",
       },
       {
         key: "nhan-code",
-        href: "https://rr88lotto.com/",
+        href: "https://alo8lotto.com/",
         iconSrc: "/maduthuong.png",
       },
       {
@@ -111,22 +111,22 @@ export default function FloatingIPhoneFolderMenu({
       },
       {
         key: "huong-dan",
-        href: "https://rr88ttkm.com/",
+        href: "https://alo8ttkm.com/",
         iconSrc: "/khuyenmai.png",
       },
       {
         key: "videosukien",
-        href: "https://rr88video.com/",
+        href: "https://alo8video.com/",
         iconSrc: "/trangvideosukien.png",
       },
       {
         key: "thien-nguyen",
-        href: "https://rr88thiennguyen.com/",
+        href: "https://alo8thiennguyen.com/",
         iconSrc: "/trangthiennguyen.png",
       },
       {
         key: "qua-tang",
-        href: "https://rr88gifts.com/",
+        href: "https://alo8gifts.com/",
         iconSrc: "/trangquatang.png",
       },
     ],

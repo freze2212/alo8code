@@ -1,8 +1,9 @@
 .main-background {
-  background-image: url('/bg-mb.webp');
-  background-size: cover;
-  background-position: center;
+  background-image: url('/bg-mb.png');
   background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  background-color: #1a1a1a;
   width: 100%;
   min-height: 100vh;
 }
@@ -11,40 +12,269 @@
   min-height: 100vh;
 }
 
-/* Breakpoints mobile custom */
-@media (max-width: 430px) {
+@media (max-width: 767px) {
+  .main-background,
   .main-background-mobile {
-    min-height: 76vh;
+    min-height: auto;
   }
 }
 
-@media (max-width: 414px) {
-  .main-background-mobile {
-    min-height: 80vh;
-  }
+/* ── Mobile (< 768px) ── */
+.landing-logo {
+  top: 1.25rem;
+  width: calc(100% - 8rem);
+  max-width: 280px;
+  height: auto;
 }
 
-@media (max-width: 390px) {
-  .main-background-mobile {
-    min-height: 75vh;
-  }
+.landing-title {
+  width: calc(100% - 7rem);
+  max-width: 320px;
+  height: auto;
+  top: calc(1.25rem + 3.375rem + 1rem);
 }
 
-@media (max-width: 375px) {
-  .main-background-mobile {
-    min-height: 72vh;
-  }
+.landing-form-wrap {
+  margin-top: calc(1.25rem + 3.375rem + 1rem + 3.25rem + 0.75rem);
 }
 
-@media (max-width: 360px) {
-  .main-background-mobile {
-    min-height: 65vh;
-  }
+.landing-form-stack {
+  gap: 1rem;
 }
 
+.landing-submit-btn {
+  width: 196px;
+  height: 69px;
+  object-fit: contain;
+}
+
+/* ── Tablet / Laptop / Desktop (≥ 768px) — PC layout, scale theo viewport ── */
 @media (min-width: 768px) {
   .main-background {
-    /* Nền PC giờ dùng video, không dùng background-image nữa */
-    background-image: none;
+    background-image: url('/bg-pc.png');
+  }
+
+  .landing-logo {
+    top: 2.5rem;
+    width: min(523px, calc(100% - 4rem));
+    max-width: 523px;
+  }
+
+  .landing-title {
+    width: min(608px, calc(100% - 3rem));
+    max-width: 608px;
+    top: calc(2.5rem + 101px + 4rem);
+  }
+
+  .landing-form-wrap {
+    margin-top: calc(2.5rem + 101px + 4rem + 102px + 2rem);
+  }
+
+  .landing-form-stack {
+    gap: 1.5rem;
+  }
+
+  .landing-submit-btn {
+    width: min(327px, 85vw);
+    height: auto;
+    aspect-ratio: 327 / 98;
+    max-height: 98px;
+  }
+}
+
+/* Tablet: thu nhỏ ô số theo tỉ lệ PC */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .registration-form__digit {
+    width: clamp(72px, 12vw, 100px);
+    height: clamp(72px, 12vw, 100px);
+    font-size: clamp(18px, 2.4vw, 24px);
+  }
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: -0.43px;
+  color: #ffe4a5;
+}
+
+.registration-form__field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.registration-form__label {
+  display: block;
+  text-align: left;
+}
+
+.registration-form__input {
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  padding: 0 20px;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: -0.43px;
+  color: #1a1a1a;
+  outline: none;
+}
+
+.registration-form__input::placeholder {
+  color: #b8b8b8;
+}
+
+.registration-form__input:focus {
+  box-shadow: 0 0 0 2px rgba(255, 228, 165, 0.45);
+}
+
+.registration-form__field--bank-digits {
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.registration-form__digits {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.registration-form__digit {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+  letter-spacing: -0.43px;
+  color: #1a1a1a;
+  outline: none;
+  padding: 0;
+}
+
+.registration-form__radios {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.registration-form__digit:focus {
+  box-shadow: 0 0 0 2px rgba(255, 228, 165, 0.45);
+}
+
+.registration-form__radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.registration-form__radio input[type='radio'] {
+  margin-top: 6px;
+  height: 18px;
+  width: 18px;
+  flex-shrink: 0;
+  accent-color: #ffe4a5;
+  cursor: pointer;
+}
+
+.registration-form__submit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.registration-form__submit:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.registration-form__submit:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+/* ── Mobile form overrides (sau base để không bị ghi đè) ── */
+@media (max-width: 767px) {
+  .registration-form {
+    font-size: 14px;
+    letter-spacing: -0.43px;
+  }
+
+  .registration-form__label,
+  .registration-form__radio {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .registration-form__field {
+    gap: 6px;
+  }
+
+  .registration-form__input {
+    height: 26px;
+    padding: 0 10px;
+    font-size: 14px;
+    letter-spacing: -0.43px;
+  }
+
+  .registration-form__field--bank-digits {
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+  }
+
+  .registration-form__digit {
+    width: calc((100% - 1.5rem) / 4);
+    height: 36px;
+    max-width: 36px;
+    max-height: 36px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .registration-form__radios {
+    gap: 0.75rem;
+  }
+
+  .registration-form__radio {
+    gap: 8px;
+  }
+
+  .registration-form__radio input[type='radio'] {
+    margin-top: 2px;
+    height: 14px;
+    width: 14px;
+  }
+
+  .registration-form__submit {
+    margin-top: 8px;
   }
 }
