@@ -1,0 +1,18 @@
+.status-modal__btn--error {
+  color: #624300;
+  background: linear-gradient(
+    180deg,
+    #f7b54a 0%,
+    #f9c877 9%,
+    #fbd89d 17%,
+    #fce5bc 26%,
+    #feeed1 35%,
+    #fef4de 44%,
+    #fff6e3 53%,
+    #fff4df 62%,
+    #ffeed4 71%,
+    #ffe4c1 80%,
+    #ffd6a7 100%
+  );
+  box-shadow: 0 12px 30px rgba(247, 181, 74, 0.35);
+}
