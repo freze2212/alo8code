@@ -1,4 +1,5 @@
 import "./Footer.css";
+import titleAlo8Img from "./assets/title-alo8.png";
 
 function Footer() {
   const navLinks = [
@@ -40,7 +41,7 @@ function Footer() {
 
           <div className="footer-desktop__center-col">
             <img
-              src="/title-alo8.png"
+              src={titleAlo8Img}
               alt="ALO8 - Nơi vận may đón chờ"
               className="footer-desktop__title-img"
             />
