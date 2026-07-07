@@ -120,7 +120,7 @@ function App() {
   return (
     <>
       <main
-        className="main-background main-background-mobile relative w-full flex items-start justify-start px-16 md:px-8 pt-3 md:pt-2 pb-0 md:pb-8"
+        className="main-background main-background-mobile relative w-full flex items-start justify-start px-16 md:px-[clamp(16px,2.08vw,32px)] pt-3 md:pt-[clamp(8px,0.52vw,8px)] pb-0 md:pb-[clamp(24px,2.08vw,32px)]"
         aria-label="Landing background"
       >
         <img
@@ -139,10 +139,10 @@ function App() {
           className="landing-title absolute left-1/2 z-10 -translate-x-1/2 object-contain"
         />
 
-        <div className="landing-form-wrap mx-auto flex w-full max-w-[608px] flex-col items-center">
+        <div className="landing-form-wrap mx-auto flex w-full flex-col items-center">
           <form
             onSubmit={handleSubmit}
-            className="registration-form w-full max-w-[608px]"
+            className="registration-form w-full"
           >
             <div className="landing-form-stack flex w-full flex-col items-stretch">
               <div className="registration-form__field">

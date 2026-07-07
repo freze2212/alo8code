@@ -1,0 +1,149 @@
+/* Desktop footer — fluid scale giữ tỉ lệ PC (reference container ~1600px = 10/12 × 1920) */
+.footer-desktop {
+  container-type: inline-size;
+  container-name: footer;
+}
+
+.footer-desktop__top-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(6px, 1vw, 16px);
+}
+
+.footer-desktop__banner-col {
+  width: 15.15%;
+  flex-shrink: 0;
+}
+
+.footer-desktop__center-col {
+  width: 37.44%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-desktop__kjc-col {
+  width: 47.41%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-desktop__title-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  padding-bottom: clamp(8px, 1vw, 16px);
+}
+
+.footer-desktop__partner-text {
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: clamp(10px, 1.33cqw, 21.32px);
+  line-height: 100%;
+  color: #fff;
+}
+
+.footer-desktop__partner-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1vw, 16px);
+  margin-top: clamp(4px, 0.5vw, 8px);
+}
+
+.footer-desktop__juve-img {
+  height: clamp(36px, 4cqw, 64px);
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-desktop__kjc-card {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  gap: clamp(8px, 1vw, 16px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  padding: clamp(8px, 0.75vw, 12px) clamp(10px, 1vw, 16px);
+}
+
+.footer-desktop__kjc-title {
+  display: block;
+  margin-bottom: clamp(2px, 0.25vw, 4px);
+  font-size: clamp(11px, 1.5cqw, 24px);
+  font-weight: 900;
+  line-height: 131%;
+  color: #fff;
+}
+
+.footer-desktop__kjc-desc {
+  display: block;
+  font-size: clamp(9px, 0.94cqw, 15px);
+  line-height: 1.375;
+  color: #fff;
+}
+
+.footer-desktop__kjc-collab {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 33.6%;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.footer-desktop__kjc-collab img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.footer-desktop__nav {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  font-size: clamp(9px, 1.0625cqw, 17px);
+  font-weight: 400;
+  line-height: 131%;
+  color: rgba(134, 141, 165, 1);
+}
+
+.footer-desktop__nav button,
+.footer-desktop__nav span {
+  font-size: inherit;
+  white-space: nowrap;
+}
+
+.footer-desktop__icons {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  padding-top: clamp(4px, 0.5vw, 8px);
+  padding-bottom: clamp(4px, 0.5vw, 8px);
+}
+
+.footer-desktop__icon {
+  width: clamp(24px, 2.75cqw, 44px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* Laptop nhỏ: nav vẫn 1 hàng, thu nhỏ gap nhẹ */
+@container footer (max-width: 900px) {
+  .footer-desktop__nav {
+    font-size: clamp(8px, 1cqw, 12px);
+  }
+}

@@ -48,46 +48,90 @@
   object-fit: contain;
 }
 
-/* ── Tablet / Laptop / Desktop (≥ 768px) — PC layout, scale theo viewport ── */
+/* ── Tablet / Laptop / Desktop (≥ 768px) — PC layout thu nhỏ theo viewport (ref 1920px) ── */
 @media (min-width: 768px) {
   .main-background {
     background-image: url('/bg-pc.png');
   }
 
   .landing-logo {
-    top: 2.5rem;
-    width: min(523px, calc(100% - 4rem));
+    top: clamp(1.5rem, 2.08vw, 2.5rem);
+    width: clamp(209px, 27.24vw, 523px);
     max-width: 523px;
   }
 
   .landing-title {
-    width: min(608px, calc(100% - 3rem));
+    width: clamp(243px, 31.67vw, 608px);
     max-width: 608px;
-    top: calc(2.5rem + 101px + 4rem);
+    top: calc(
+      clamp(1.5rem, 2.08vw, 2.5rem) + clamp(40px, 5.26vw, 101px) +
+        clamp(2rem, 3.33vw, 4rem)
+    );
   }
 
   .landing-form-wrap {
-    margin-top: calc(2.5rem + 101px + 4rem + 102px + 2rem);
+    max-width: clamp(243px, 31.67vw, 608px);
+    margin-top: calc(
+      clamp(1.5rem, 2.08vw, 2.5rem) + clamp(40px, 5.26vw, 101px) +
+        clamp(2rem, 3.33vw, 4rem) + clamp(41px, 5.31vw, 102px) +
+        clamp(1rem, 2.08vw, 2rem)
+    );
   }
 
   .landing-form-stack {
-    gap: 1.5rem;
+    gap: clamp(1rem, 1.25vw, 1.5rem);
   }
 
   .landing-submit-btn {
-    width: min(327px, 85vw);
+    width: clamp(131px, 17.03vw, 327px);
     height: auto;
     aspect-ratio: 327 / 98;
-    max-height: 98px;
+    max-height: clamp(39px, 5.1vw, 98px);
   }
-}
 
-/* Tablet: thu nhỏ ô số theo tỉ lệ PC */
-@media (min-width: 768px) and (max-width: 1023px) {
+  .registration-form {
+    font-size: clamp(16px, 1.25vw, 24px);
+  }
+
+  .registration-form__field {
+    gap: clamp(6px, 0.52vw, 10px);
+  }
+
+  .registration-form__input {
+    height: clamp(32px, 2.5vw, 48px);
+    padding: 0 clamp(12px, 1.04vw, 20px);
+    font-size: clamp(16px, 1.25vw, 24px);
+  }
+
+  .registration-form__field--bank-digits {
+    gap: clamp(10px, 1.04vw, 20px);
+    margin-top: clamp(10px, 1.04vw, 20px);
+    margin-bottom: clamp(16px, 1.67vw, 32px);
+  }
+
   .registration-form__digit {
-    width: clamp(72px, 12vw, 100px);
-    height: clamp(72px, 12vw, 100px);
-    font-size: clamp(18px, 2.4vw, 24px);
+    width: clamp(56px, 5.21vw, 100px);
+    height: clamp(56px, 5.21vw, 100px);
+    font-size: clamp(14px, 1.25vw, 24px);
+    border-radius: clamp(8px, 0.625vw, 12px);
+  }
+
+  .registration-form__radios {
+    gap: clamp(0.625rem, 0.73vw, 0.875rem);
+  }
+
+  .registration-form__radio {
+    gap: clamp(6px, 0.52vw, 10px);
+  }
+
+  .registration-form__radio input[type='radio'] {
+    margin-top: clamp(3px, 0.31vw, 6px);
+    height: clamp(14px, 0.94vw, 18px);
+    width: clamp(14px, 0.94vw, 18px);
+  }
+
+  .registration-form__submit {
+    margin-top: clamp(8px, 0.625vw, 12px);
   }
 }
 

@@ -1,3 +1,5 @@
+import "./Footer.css";
+
 function Footer() {
   const navLinks = [
     "Giới thiệu về ALO8",
@@ -25,70 +27,49 @@ function Footer() {
 
   return (
     <footer className="mt-0 w-full bg-[#1A1A1A] text-white md:mt-[5px]">
-      {/* ── Desktop ── */}
-      <div className="mx-auto hidden w-10/12 flex-col gap-2 px-6 py-6 text-[13px] md:flex">
-        <div className="flex w-full flex-row items-center justify-between gap-4">
-          <div className="flex justify-start">
+      {/* ── Desktop / Tablet / Laptop — PC layout thu nhỏ ── */}
+      <div className="footer-desktop mx-auto hidden w-10/12 flex-col gap-[clamp(6px,0.5vw,8px)] px-[clamp(12px,1.25vw,24px)] py-[clamp(16px,1.25vw,24px)] text-[clamp(10px,0.68vw,13px)] md:flex">
+        <div className="footer-desktop__top-row">
+          <div className="footer-desktop__banner-col">
             <img
               src="/banner.webp"
               alt="Footer Banner"
-              className="h-auto max-w-[234px] object-contain"
+              className="h-auto w-full object-contain"
             />
           </div>
 
-          <div className="flex flex-col items-start">
-            <div className="flex justify-start">
-              <img
-                src="/title-alo8.png"
-                alt="ALO8 - Nơi vận may đón chờ"
-                className="h-auto w-[578px] object-contain pb-4"
-              />
-            </div>
-            <div className="mt-2 flex items-center gap-4">
+          <div className="footer-desktop__center-col">
+            <img
+              src="/title-alo8.png"
+              alt="ALO8 - Nơi vận may đón chờ"
+              className="footer-desktop__title-img"
+            />
+            <div className="footer-desktop__partner-row">
               <div className="flex flex-col items-start">
-                <span
-                  className="text-white text-[21.32px] leading-[100%]"
-                  style={{
-                    fontFamily:
-                      "Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-                    fontWeight: 400,
-                  }}
-                >
+                <span className="footer-desktop__partner-text">
                   Juventus FC & KJC
                 </span>
-                <span
-                  className="text-white text-[21.32px] leading-[100%]"
-                  style={{
-                    fontFamily:
-                      "Roboto, system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-                    fontWeight: 400,
-                  }}
-                >
+                <span className="footer-desktop__partner-text">
                   Đối tác chính thức Năm 2025-2026
                 </span>
               </div>
 
-              <div className="flex items-center">
-                <img
-                  src="/juve-kjc.webp"
-                  alt="Juventus & KJC"
-                  className="h-[64px] w-auto object-contain"
-                />
-              </div>
+              <img
+                src="/juve-kjc.webp"
+                alt="Juventus & KJC"
+                className="footer-desktop__juve-img"
+              />
             </div>
           </div>
 
-          <div className="flex justify-end">
-            <div className="flex w-[732px] items-stretch gap-4 rounded-xl border border-white border-opacity-10 bg-transparent px-4 py-3">
+          <div className="footer-desktop__kjc-col">
+            <div className="footer-desktop__kjc-card">
               <div className="flex flex-1 flex-col justify-between">
                 <div>
-                  <span
-                    className="mb-1 block text-[24px] font-extrabold leading-[131%] text-white"
-                    style={{ fontWeight: 900 }}
-                  >
+                  <span className="footer-desktop__kjc-title">
                     KJC | JUVENTUS – ĐỐI TÁC ĐỘC QUYỀN KHU VỰC CHÂU Á
                   </span>
-                  <span className="block text-[15px] leading-snug text-white">
+                  <span className="footer-desktop__kjc-desc">
                     <span className="font-semibold">KJC</span> hợp tác độc quyền
                     với <span className="font-semibold">CLB Juventus</span> tại
                     châu Á, đưa thương hiệu vươn tầm quốc tế. Juventus – biểu
@@ -96,40 +77,34 @@ function Footer() {
                     sứ độc quyền quyền, nâng uy tín...
                   </span>
                 </div>
-                <div className="mt-2">
-                  <button className="text-sm text-white underline transition hover:opacity-80">
+                <div className="mt-[clamp(4px,0.5vw,8px)]">
+                  <button className="text-[clamp(9px,0.73vw,14px)] text-white underline transition hover:opacity-80">
                     Ẩn bớt
                   </button>
                 </div>
               </div>
-              <div className="relative mt-auto mb-auto h-auto w-[246px] flex-shrink-0 overflow-hidden rounded-[8px]">
-                <img
-                  src="/collab.webp"
-                  alt="Collab KJC-Juventus"
-                  className="block h-full w-full object-cover"
-                />
+              <div className="footer-desktop__kjc-collab">
+                <img src="/collab.webp" alt="Collab KJC-Juventus" />
               </div>
             </div>
           </div>
         </div>
 
-        <nav className="flex w-full flex-nowrap items-center justify-between gap-0 text-[17px] font-normal leading-[131%] text-[rgba(134,141,165,1)]">
+        <nav className="footer-desktop__nav">
           {navLinks.map((label, index) => [
             <button
               key={`nav-${index}`}
-              className="whitespace-nowrap text-[17px] font-normal transition hover:opacity-80"
+              className="font-normal transition hover:opacity-80"
             >
               {label}
             </button>,
             index < navLinks.length - 1 && (
-              <span key={`sep-${index}`} className="text-[17px]">
-                |
-              </span>
+              <span key={`sep-${index}`}>|</span>
             ),
           ])}
         </nav>
 
-        <div className="flex w-full flex-nowrap items-center justify-between gap-0 py-2">
+        <div className="footer-desktop__icons">
           {desktopIcons.map((src, idx) => (
             <div
               key={`desktop-icon-${idx}`}
@@ -138,7 +113,7 @@ function Footer() {
               <img
                 src={src}
                 alt={`Footer icon ${idx + 1}`}
-                className="h-auto w-[44px] object-contain"
+                className="footer-desktop__icon"
               />
             </div>
           ))}
