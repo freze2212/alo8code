@@ -1,9 +1,9 @@
 import "./Footer.css";
-import titleAlo8Img from "./assets/title-alo8.png";
+import titleVnd88Img from "./assets/title-vnd88.png";
 
 function Footer() {
   const navLinks = [
-    "Giới thiệu về ALO8",
+    "Giới thiệu về VND88",
     "Điều khoản & điều kiện",
     "Chơi có trách nhiệm",
     "Miễn trách nhiệm",
@@ -23,7 +23,7 @@ function Footer() {
     { src: "/icon-ytb.png", alt: "YouTube" },
     { src: "/icon-tele.png", alt: "Telegram" },
     { src: "/icon-tiktok.png", alt: "TikTok" },
-    { src: "/alo-logo.png", alt: "ALO8" },
+    { src: "/logo-vnd88.png", alt: "VND88" },
   ];
 
   return (
@@ -41,8 +41,8 @@ function Footer() {
 
           <div className="footer-desktop__center-col">
             <img
-              src={titleAlo8Img}
-              alt="ALO8 - Nơi vận may đón chờ"
+              src={titleVnd88Img}
+              alt="VND88 - Tinh hoa hội tụ"
               className="footer-desktop__title-img"
             />
             <div className="footer-desktop__partner-row">
@@ -125,7 +125,7 @@ function Footer() {
       <div className="flex w-full flex-col md:hidden">
         <img
           src="/banner-footer-mb.png"
-          alt="ALO8 Footer Banner"
+          alt="VND88 Footer Banner"
           className="block h-auto w-full"
         />
 

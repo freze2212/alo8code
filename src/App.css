@@ -31,11 +31,11 @@
   width: calc(100% - 7rem);
   max-width: 320px;
   height: auto;
-  top: calc(1.25rem + 3.375rem + 1rem);
+  top: calc(1.25rem + 2.625rem + 1rem);
 }
 
 .landing-form-wrap {
-  margin-top: calc(1.25rem + 3.375rem + 1rem + 3.25rem + 0.75rem);
+  margin-top: calc(1.25rem + 2.625rem + 1rem + 3.25rem + 0.75rem);
 }
 
 .landing-form-stack {
@@ -56,15 +56,15 @@
 
   .landing-logo {
     top: clamp(1.5rem, 2.08vw, 2.5rem);
-    width: clamp(209px, 27.24vw, 523px);
-    max-width: 523px;
+    width: clamp(236px, 30.68vw, 589px);
+    max-width: 589px;
   }
 
   .landing-title {
     width: clamp(243px, 31.67vw, 608px);
     max-width: 608px;
     top: calc(
-      clamp(1.5rem, 2.08vw, 2.5rem) + clamp(40px, 5.26vw, 101px) +
+      clamp(1.5rem, 2.08vw, 2.5rem) + clamp(35px, 4.58vw, 88px) +
         clamp(2rem, 3.33vw, 4rem)
     );
   }
@@ -72,7 +72,7 @@
   .landing-form-wrap {
     max-width: clamp(243px, 31.67vw, 608px);
     margin-top: calc(
-      clamp(1.5rem, 2.08vw, 2.5rem) + clamp(40px, 5.26vw, 101px) +
+      clamp(1.5rem, 2.08vw, 2.5rem) + clamp(35px, 4.58vw, 88px) +
         clamp(2rem, 3.33vw, 4rem) + clamp(41px, 5.31vw, 102px) +
         clamp(1rem, 2.08vw, 2rem)
     );

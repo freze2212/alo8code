@@ -35,7 +35,7 @@ function clamp(n: number, min: number, max: number) {
 
 export default function FloatingIPhoneFolderMenu({
   items,
-  storageKey = "alo8_floating_home_pos",
+  storageKey = "vnd88_floating_home_pos",
 }: FloatingIPhoneFolderMenuProps) {
   const [open, setOpen] = React.useState(false);
   const [homeHref, setHomeHref] = React.useState(

@@ -124,10 +124,10 @@ function App() {
         aria-label="Landing background"
       >
         <img
-          src="/logo.png"
-          alt="ALO8 logo"
-          width={523}
-          height={101}
+          src="/logo-vnd88.png"
+          alt="VND88 logo"
+          width={589}
+          height={88}
           className="landing-logo absolute left-1/2 z-10 -translate-x-1/2 object-contain"
         />
 
